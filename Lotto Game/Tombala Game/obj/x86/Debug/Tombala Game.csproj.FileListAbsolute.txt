@@ -1,0 +1,20 @@
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\bin\Debug\Tombala Game.exe
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\bin\Debug\Tombala Game.pdb
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form1.resources
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\obj\x86\Debug\Tombala_Game.Properties.Resources.resources
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.csproj.GenerateResource.Cache
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.exe
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.pdb
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.csprojResolveAssemblyReference.cache
+C:\Users\Paradox\Documents\Visual Studio 2010\Projects\Tombala Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form2.resources
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.exe
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.pdb
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\bin\Debug\Tombala Game.exe
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\bin\Debug\Tombala Game.pdb
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.csprojResolveAssemblyReference.cache
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form1.resources
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form2.resources
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\obj\x86\Debug\Tombala_Game.Properties.Resources.resources
+C:\Users\Paradox\Desktop\Tombala Game\Tombala Game\obj\x86\Debug\Tombala Game.csproj.GenerateResource.Cache
+C:\Users\Paradox\Desktop\Lotto Game\Tombala Game\obj\x86\Debug\Tombala Game.exe
+C:\Users\Paradox\Desktop\Lotto Game\Tombala Game\obj\x86\Debug\Tombala Game.pdb
