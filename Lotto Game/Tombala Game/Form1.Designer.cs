@@ -46,6 +46,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 448);
@@ -57,7 +58,9 @@
             // 
             // toolStripStatusLabel1
             // 
+            this.toolStripStatusLabel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.toolStripStatusLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(181, 17);
             this.toolStripStatusLabel1.Text = "Waiting for starting game...";
@@ -72,49 +75,57 @@
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(668, 68);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button4.Location = new System.Drawing.Point(528, 16);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 42);
             this.button4.TabIndex = 4;
             this.button4.Text = "About Developer";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button3.Location = new System.Drawing.Point(172, 16);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 42);
             this.button3.TabIndex = 1;
             this.button3.Text = "Start Game";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button1.Location = new System.Drawing.Point(405, 16);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 42);
             this.button1.TabIndex = 3;
             this.button1.Text = "Finish Game";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label7.Location = new System.Drawing.Point(16, 29);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
@@ -124,8 +135,10 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.numericUpDown1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.numericUpDown1.Location = new System.Drawing.Point(117, 26);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             9,
             0,
@@ -147,13 +160,15 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.button2.Location = new System.Drawing.Point(292, 16);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 42);
             this.button2.TabIndex = 2;
             this.button2.Text = "Pick Number";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox1
@@ -161,7 +176,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 17;
             this.listBox1.Location = new System.Drawing.Point(592, 88);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(73, 55);
             this.listBox1.TabIndex = 4;
@@ -172,7 +187,7 @@
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 17;
             this.listBox2.Location = new System.Drawing.Point(592, 152);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(4);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(84, 55);
             this.listBox2.TabIndex = 5;
@@ -182,6 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(668, 470);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
@@ -189,9 +205,10 @@
             this.Controls.Add(this.statusStrip1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lotto Game";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.statusStrip1.ResumeLayout(false);

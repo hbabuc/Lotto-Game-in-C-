@@ -21,6 +21,7 @@ namespace Tombala_Game
             grp.Height = 90;
             grp.Location = point;
             grp.Name = "player_" + order.ToString();
+            grp.ForeColor = Color.FromName("HotTrack");
             grp.Text = text;
             form.Controls.Add(grp);
 
@@ -33,6 +34,7 @@ namespace Tombala_Game
                 label.Name = grp.Name + "_" + i.ToString();
                 label.Size = new Size(30, 17);
                 label.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                label.ForeColor = Color.Gray;
                 //MessageBox.Show(label.Name);
                 label.Location = new Point(spacex, spacey);
                 spacex += 53;

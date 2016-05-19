@@ -38,7 +38,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 72);
+            this.label1.Location = new System.Drawing.Point(67, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(239, 17);
@@ -48,7 +48,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 114);
+            this.label2.Location = new System.Drawing.Point(105, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 17);
@@ -58,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(80, 158);
+            this.label3.Location = new System.Drawing.Point(80, 140);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(203, 17);
@@ -67,8 +67,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(97, 205);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(97, 187);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 42);
             this.button1.TabIndex = 3;
@@ -78,7 +78,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(97, 265);
+            this.button2.Location = new System.Drawing.Point(97, 247);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 42);
@@ -91,6 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(379, 343);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -98,8 +99,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -125,6 +125,7 @@ namespace Tombala_Game
                     if (getLabel(i, k).Text != "√" && Convert.ToInt32(getLabel(i, k).Text) == number)
                     {
                         getLabel(i, k).Text = "√";
+                        getLabel(i, k).Font = new Font("Segoe UI", 12, FontStyle.Bold);
                         getLabel(i, k).ForeColor = Color.Green;
                         buzzWinnerLabel(getLabel(i, k));
                     }
