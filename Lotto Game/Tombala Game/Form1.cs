@@ -18,7 +18,7 @@ namespace Tombala_Game
             InitializeComponent();
         }
 
-        const int START_X = 32, START_Y = 78, SPACE_X = 214, SPACE_Y = 122;
+        const int START_X = 32, START_Y = 88, SPACE_X = 214, SPACE_Y = 122;
         int counter = 1;
         
         ArrayList numberArr = new ArrayList();
@@ -59,7 +59,7 @@ namespace Tombala_Game
                 for (int k = 1; k < 7; k++)
 			    {
                     int a = Convert.ToInt32(listBox1.Items[rnd.Next(1, listBox1.Items.Count)]);
-                    this.Controls["player_" + counter.ToString()].Controls[("player_" + counter.ToString() + "_" + k.ToString())].Text = a.ToString();
+                    getLabel(i, k).Text = a.ToString();
                     arr.Add(a);
                     listBox1.Items.Remove(a);
 			    }
@@ -81,10 +81,10 @@ namespace Tombala_Game
             {
                 for (int k = 1; k < 7; k++)
                 {
-                    this.Controls["player_" + i.ToString()].Controls["player_" + i.ToString() + "_" + k.ToString()].Dispose();
+                    getLabel(i, k).Dispose();
                 }
 
-                this.Controls["player_" + i.ToString()].Dispose();
+                getGroupBox(i).Dispose();
             }
 
 
@@ -101,7 +101,7 @@ namespace Tombala_Game
             counter = 1;
             button1.Enabled = false;
             button2.Enabled = false;
-            
+            toolStripStatusLabel1.Text = "Game Finished.";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -122,17 +122,16 @@ namespace Tombala_Game
             {
                 for (int k = 1; k < 7; k++)
                 {
-                    if (this.Controls["player_" + i.ToString()].Controls["player_" + i.ToString() + "_" + k.ToString()].Text != "√" && Convert.ToInt32(this.Controls["player_" + i.ToString()].Controls["player_" + i.ToString() + "_" + k.ToString()].Text) == number) {
-                        this.Controls["player_" + i.ToString()].Controls["player_" + i.ToString() + "_" + k.ToString()].Text = "√";
-                        this.Controls["player_" + i.ToString()].Controls["player_" + i.ToString() + "_" + k.ToString()].ForeColor = Color.Green;
-                        buzzWinnerLabel((Label)this.Controls["player_" + i.ToString()].Controls["player_" + i.ToString() + "_" + k.ToString()]);
+                    if (getLabel(i, k).Text != "√" && Convert.ToInt32(getLabel(i, k).Text) == number)
+                    {
+                        getLabel(i, k).Text = "√";
+                        getLabel(i, k).ForeColor = Color.Green;
+                        buzzWinnerLabel(getLabel(i, k));
                     }
                 }
             }
 
-            
-            winControl();
-
+            winControl(); // wincontrol() function works when any number picked up
         }
 
 
@@ -145,7 +144,7 @@ namespace Tombala_Game
                 f = "";
                 for (int k = 1; k < 7; k++)
                 {
-                    f += this.Controls["player_" + i.ToString()].Controls["player_" + i.ToString() + "_" + k.ToString()].Text;
+                    f += getLabel(i, k).Text;
                 }
 
                 if (f == s) {
@@ -213,5 +212,19 @@ namespace Tombala_Game
             th.Abort();
         }
 
+
+        private Label getLabel(int group,int order) {
+            return (Label)this.Controls["player_" + group.ToString()].Controls["player_" + group.ToString() + "_" + order.ToString()];
+        }
+
+        private GroupBox getGroupBox(int group)
+        {
+            return (GroupBox)this.Controls["player_" + group.ToString()];
+        }
+
     }
+
+
+    
+
 }

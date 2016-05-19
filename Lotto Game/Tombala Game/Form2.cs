@@ -21,5 +21,10 @@ namespace Tombala_Game
         {
             Process.Start("http://www.hbabuc.com");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://github.com/hbabuc");
+        }
     }
 }
