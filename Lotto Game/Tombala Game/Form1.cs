@@ -18,25 +18,32 @@ namespace Tombala_Game
             InitializeComponent();
         }
 
-        const int START_X = 32, START_Y = 88, SPACE_X = 214, SPACE_Y = 122;
+        const int START_X = 44, START_Y = 99, SPACE_X = 276, SPACE_Y = 201;
         int counter = 1;
         
-        ArrayList numberArr = new ArrayList();
+        
         ArrayList winArr = new ArrayList();
+        bool[,] zinc = new bool[6,3];
         bool firstWinner = true;
         Thread th;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             Form1.CheckForIllegalCrossThreadCalls = false;
-            for (int i = 1; i < 100; i++) listBox1.Items.Add(i);
-            for (int i = 1; i < 100; i++) listBox2.Items.Add(i);
+
+            for (int i = 1; i <= 99; i++) {
+                listBox1.Items.Add(i);
+                listBox2.Items.Add(i);
+            }
+
+            listBox3.Items.Add("Waiting for starting game...");
             button1.Enabled = false;
             button2.Enabled = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             toolStripStatusLabel1.Text = "Game started.";
             Random rnd = new Random();
             numericUpDown1.Enabled = false;
@@ -49,22 +56,20 @@ namespace Tombala_Game
                 spacex += SPACE_X;
 
                 if (i % 3 == 0) { 
-                    spacey += 122;
+                    spacey += SPACE_Y;
                     spacex = START_X;
                 }
 
-                ArrayList arr = new ArrayList();
-
                 
-                for (int k = 1; k < 7; k++)
+     
+                for (int k = 1; k <= 15; k++)
 			    {
-                    int a = Convert.ToInt32(listBox1.Items[rnd.Next(1, listBox1.Items.Count)]);
+                    int a = Convert.ToInt32(listBox1.Items[rnd.Next(1, listBox1.Items.Count)].ToString());
                     getLabel(i, k).Text = a.ToString();
-                    arr.Add(a);
                     listBox1.Items.Remove(a);
 			    }
 
-                numberArr.Add(arr);
+                sortGroupBoxLabels(i);
 
 
                 counter++;
@@ -79,7 +84,7 @@ namespace Tombala_Game
         {
             for (int i = 1; i < counter; i++)
             {
-                for (int k = 1; k < 7; k++)
+                for (int k = 1; k <= 15; k++)
                 {
                     getLabel(i, k).Dispose();
                 }
@@ -88,13 +93,18 @@ namespace Tombala_Game
             }
 
 
-            numberArr = new ArrayList();
+            zinc = new bool[6,3];
             winArr = new ArrayList();
             listBox1.Items.Clear();
             listBox2.Items.Clear();
-           
-            for (int i = 1; i < 100; i++) listBox1.Items.Add(i);
-            for (int i = 1; i < 100; i++) listBox2.Items.Add(i);
+            listBox3.Items.Clear();
+            firstWinner = true;
+
+            for (int i = 1; i <= 99; i++)
+            {
+                listBox1.Items.Add(i);
+                listBox2.Items.Add(i);
+            }
 
             numericUpDown1.Enabled = true;
             button3.Enabled = true;
@@ -102,6 +112,8 @@ namespace Tombala_Game
             button1.Enabled = false;
             button2.Enabled = false;
             toolStripStatusLabel1.Text = "Game Finished.";
+            toolStripStatusLabel1.Text = "Waiting for starting game...";
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -109,6 +121,7 @@ namespace Tombala_Game
             if (listBox2.Items.Count == 0)
             {
                 button2.Enabled = false;
+                toolStripStatusLabel1.Text = "Game Finished.";
                 return;
             }
                 
@@ -120,7 +133,7 @@ namespace Tombala_Game
             toolStripStatusLabel1.Text = number.ToString() + " picked.";
             for (int i = 1; i < counter; i++)
             {
-                for (int k = 1; k < 7; k++)
+                for (int k = 1; k <= 15; k++)
                 {
                     if (getLabel(i, k).Text != "√" && Convert.ToInt32(getLabel(i, k).Text) == number)
                     {
@@ -133,41 +146,42 @@ namespace Tombala_Game
             }
 
             winControl(); // wincontrol() function works when any number picked up
+
+            zincControl(); // zinc (çinko) control
         }
 
 
         private void winControl(){
-            string s = "√√√√√√",f = "";
+            string s = "√√√√√√√√√√√√√√√", f = "";
             
             
             for (int i = 1; i < counter; i++)
             {
                 f = "";
-                for (int k = 1; k < 7; k++)
+                for (int k = 1; k <= 15; k++)
                 {
                     f += getLabel(i, k).Text;
                 }
 
                 if (f == s) {
-                    if(!isItInTheArray(winArr,i))
-                    winArr.Add(i);
+                    if (!isItInTheArray(winArr, i))
+                    {
+                        winArr.Add(i);
+                        
+                        string g = "";
+                        foreach (var item in winArr)
+                            g += item.ToString() + ",";
+                        g = g.Substring(0, g.Length - 1);
+                        toolStripStatusLabel1.Text = "Player " + g + " wins.";
+                    }
+                    
                 }
             }
 
-            if(winArr.Count > 0)
+            if(winArr.Count > 0 && firstWinner)
             {
-                if (firstWinner)
-                {
-                    MessageBox.Show("Player " + winArr[0].ToString() + " wins.");
-                    firstWinner = false; 
-                }
-      
-                toolStripStatusLabel1.Text += " || Player ";
-
-                foreach (var item in winArr)
-                    toolStripStatusLabel1.Text += item.ToString() + ",";
-                toolStripStatusLabel1.Text = toolStripStatusLabel1.Text.Substring(0, toolStripStatusLabel1.Text.Length - 1);
-                toolStripStatusLabel1.Text += " wins.";
+                MessageBox.Show("Player " + winArr[0].ToString() + " wins.");
+                firstWinner = false; 
             }
             
 
@@ -223,8 +237,104 @@ namespace Tombala_Game
             return (GroupBox)this.Controls["player_" + group.ToString()];
         }
 
+        private void sortGroupBoxLabels(int order) {
+            List<int> numberArr = new List<int>();
+            for (int i = 1; i <= 15; i++)
+                numberArr.Add(Convert.ToInt32(getLabel(order, i).Text));
+            numberArr.Sort();
+            int one = 1, six = 6, eleven = 11;
+            for (int i = 0; i < 13; i+=3) {
+
+                getLabel(order, one++).Text = numberArr[i].ToString();
+                getLabel(order, six++).Text = numberArr[i+1].ToString();
+                getLabel(order, eleven++).Text = numberArr[i+2].ToString();
+            }
+                
+
+            
+        }
+
+
+        private void zincControl() {
+            string s = "√√√√√", f = "";
+
+            for (int i = 1; i < counter; i++)
+            {
+                if (!zinc[i-1, 0]) { 
+
+                    f = "";
+
+                    for (int k = 1; k <= 5; k++)
+                        f += getLabel(i, k).Text;
+
+                    if (f == s) {
+                        zinc[i-1, 0] = true;
+                        if(cinkoCount(i) < 3)
+                            toolStripStatusLabel1.Text = i.ToString() + ". player, " + cinkoCount(i).ToString() + ". çinko.";
+                        for (int k = 1; k <= 5; k++)
+                            getLabel(i, k).BackColor = Color.Green;
+                    }
+                    
+                }
+
+
+                if (!zinc[i-1, 1])
+                {
+                    f = "";
+
+                    for (int k = 6; k <= 10; k++)
+                        f += getLabel(i, k).Text;
+
+                    if (f == s)
+                    {
+                        zinc[i-1, 1] = true;
+                        if (cinkoCount(i) < 3)
+                            toolStripStatusLabel1.Text = i.ToString() + ". player, " + cinkoCount(i).ToString() + ". çinko.";
+                        for (int k = 6; k <= 10; k++)
+                            getLabel(i, k).BackColor = Color.Green;
+                    }
+                }
+
+
+
+                if (!zinc[i-1, 2])
+                {
+                    f = "";
+
+                    for (int k = 11; k <= 15; k++)
+                        f += getLabel(i, k).Text;
+
+
+                    if (f == s)
+                    {
+                        zinc[i-1, 2] = true;
+                        if (cinkoCount(i) < 3)
+                            toolStripStatusLabel1.Text = i.ToString() + ". player, " + cinkoCount(i).ToString() + ". çinko.";
+                        for (int k = 11; k <= 15; k++)
+                            getLabel(i, k).BackColor = Color.Green;
+                    }
+
+                }
+            }
+
+        }
+
+        private int cinkoCount(int order){
+            int count = 0;
+            for (int i = 0; i < 3; i++)
+			    if(zinc[order - 1,i])
+                    count++;
+            return count;
+        }
+
+        private void toolStripStatusLabel1_TextChanged(object sender, EventArgs e)
+        {
+            listBox3.Items.Insert(0, toolStripStatusLabel1.Text);
+        }
+
     }
 
+   
 
     
 

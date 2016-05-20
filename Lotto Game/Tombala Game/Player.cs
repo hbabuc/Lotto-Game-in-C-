@@ -17,28 +17,29 @@ namespace Tombala_Game
             form = _form;
 
             GroupBox grp = new GroupBox();
-            grp.Width = 171;
-            grp.Height = 90;
+            grp.Width = 240;
+            grp.Height = 159;
             grp.Location = point;
             grp.Name = "player_" + order.ToString();
             grp.ForeColor = Color.FromName("HotTrack");
             grp.Text = text;
             form.Controls.Add(grp);
 
-            int spacex = 23,spacey = 29, c = 1;
+            int spacex = 28,spacey = 37, c = 1;
 
-            for (int i = 1; i < 7; i++)
+            for (int i = 1; i < 16; i++)
 			{
 			    Label label = new Label();
-                label.Text = "99";
+                label.Text = "90";
                 label.Name = grp.Name + "_" + i.ToString();
-                label.Size = new Size(30, 17);
+                label.Size = new Size(30, 25);
                 label.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                label.ForeColor = Color.Gray;
-                //MessageBox.Show(label.Name);
+                label.ForeColor = Color.FromName("HotTrack");
+                label.BorderStyle = BorderStyle.FixedSingle;
+                label.TextAlign = ContentAlignment.MiddleCenter;
                 label.Location = new Point(spacex, spacey);
-                spacex += 53;
-                if (++c == 4) { spacex = 23; spacey = 58; }
+                spacex += 39;
+                if (c++ % 5 == 0) { spacex = 28; spacey += 38; }
                 grp.Controls.Add(label);
                
 			}

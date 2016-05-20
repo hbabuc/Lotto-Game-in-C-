@@ -25,3 +25,12 @@ C:\Users\Paradox\Desktop\Lotto Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form
 C:\Users\Paradox\Desktop\Lotto Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form2.resources
 C:\Users\Paradox\Desktop\Lotto Game\Tombala Game\obj\x86\Debug\Tombala_Game.Properties.Resources.resources
 C:\Users\Paradox\Desktop\Lotto Game\Tombala Game\obj\x86\Debug\Tombala Game.csproj.GenerateResource.Cache
+D:\Programlar\Projeler\Lotto Game\Tombala Game\obj\x86\Debug\Tombala Game.exe
+D:\Programlar\Projeler\Lotto Game\Tombala Game\obj\x86\Debug\Tombala Game.pdb
+D:\Programlar\Projeler\Lotto Game\Tombala Game\bin\Debug\Tombala Game.exe
+D:\Programlar\Projeler\Lotto Game\Tombala Game\bin\Debug\Tombala Game.pdb
+D:\Programlar\Projeler\Lotto Game\Tombala Game\obj\x86\Debug\Tombala Game.csprojResolveAssemblyReference.cache
+D:\Programlar\Projeler\Lotto Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form1.resources
+D:\Programlar\Projeler\Lotto Game\Tombala Game\obj\x86\Debug\Tombala_Game.Form2.resources
+D:\Programlar\Projeler\Lotto Game\Tombala Game\obj\x86\Debug\Tombala_Game.Properties.Resources.resources
+D:\Programlar\Projeler\Lotto Game\Tombala Game\obj\x86\Debug\Tombala Game.csproj.GenerateResource.Cache

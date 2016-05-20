@@ -39,6 +39,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox3 = new System.Windows.Forms.ListBox();
             this.statusStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -49,10 +50,10 @@
             this.statusStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 448);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 509);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(668, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1075, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -64,6 +65,7 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(181, 17);
             this.toolStripStatusLabel1.Text = "Waiting for starting game...";
+            this.toolStripStatusLabel1.TextChanged += new System.EventHandler(this.toolStripStatusLabel1_TextChanged);
             // 
             // groupBox2
             // 
@@ -78,7 +80,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(668, 68);
+            this.groupBox2.Size = new System.Drawing.Size(1075, 68);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -91,7 +93,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 42);
             this.button4.TabIndex = 4;
-            this.button4.Text = "About Developer";
+            this.button4.Text = "About";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -140,7 +142,7 @@
             this.numericUpDown1.Location = new System.Drawing.Point(117, 26);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            9,
+            6,
             0,
             0,
             0});
@@ -175,7 +177,7 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 17;
-            this.listBox1.Location = new System.Drawing.Point(592, 88);
+            this.listBox1.Location = new System.Drawing.Point(817, 74);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(73, 55);
@@ -186,23 +188,36 @@
             // 
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 17;
-            this.listBox2.Location = new System.Drawing.Point(592, 152);
+            this.listBox2.Location = new System.Drawing.Point(817, 137);
             this.listBox2.Margin = new System.Windows.Forms.Padding(4);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(84, 55);
             this.listBox2.TabIndex = 5;
             this.listBox2.Visible = false;
             // 
+            // listBox3
+            // 
+            this.listBox3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.listBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.listBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.listBox3.FormattingEnabled = true;
+            this.listBox3.ItemHeight = 17;
+            this.listBox3.Location = new System.Drawing.Point(885, 68);
+            this.listBox3.Name = "listBox3";
+            this.listBox3.Size = new System.Drawing.Size(190, 441);
+            this.listBox3.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(668, 470);
+            this.ClientSize = new System.Drawing.Size(1075, 531);
+            this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.listBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -234,6 +249,7 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ListBox listBox3;
     }
 }
 
