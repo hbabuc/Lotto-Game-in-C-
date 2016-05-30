@@ -38,12 +38,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 54);
+            this.label1.Location = new System.Drawing.Point(59, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(239, 17);
+            this.label1.Size = new System.Drawing.Size(253, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "This game written by Hüseyin BABUÇ";
+            this.label1.Text = "This game is written by Hüseyin BABUÇ";
             // 
             // label2
             // 

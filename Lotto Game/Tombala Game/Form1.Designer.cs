@@ -40,9 +40,11 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -50,10 +52,10 @@
             this.statusStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 509);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 406);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1075, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(711, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -80,7 +82,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(1075, 68);
+            this.groupBox2.Size = new System.Drawing.Size(711, 68);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -88,7 +90,7 @@
             // 
             this.button4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(528, 16);
+            this.button4.Location = new System.Drawing.Point(547, 16);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 42);
@@ -101,7 +103,7 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.Location = new System.Drawing.Point(172, 16);
+            this.button3.Location = new System.Drawing.Point(191, 16);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 42);
@@ -114,7 +116,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(405, 16);
+            this.button1.Location = new System.Drawing.Point(424, 16);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 42);
@@ -128,21 +130,21 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(16, 29);
+            this.label7.Location = new System.Drawing.Point(9, 29);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 17);
+            this.label7.Size = new System.Drawing.Size(125, 17);
             this.label7.TabIndex = 4;
-            this.label7.Text = "Player Count";
+            this.label7.Text = "Number of Player :";
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.numericUpDown1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.numericUpDown1.Location = new System.Drawing.Point(117, 26);
+            this.numericUpDown1.Location = new System.Drawing.Point(136, 26);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
-            6,
+            9,
             0,
             0,
             0});
@@ -164,7 +166,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(292, 16);
+            this.button2.Location = new System.Drawing.Point(311, 16);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 42);
@@ -202,17 +204,29 @@
             this.listBox3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.listBox3.FormattingEnabled = true;
             this.listBox3.ItemHeight = 17;
-            this.listBox3.Location = new System.Drawing.Point(885, 68);
+            this.listBox3.Location = new System.Drawing.Point(521, 68);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(190, 441);
+            this.listBox3.Size = new System.Drawing.Size(190, 338);
             this.listBox3.TabIndex = 6;
+            this.listBox3.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Tombala_Game.Properties.Resources.asda;
+            this.pictureBox1.Location = new System.Drawing.Point(85, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(524, 338);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1075, 531);
+            this.ClientSize = new System.Drawing.Size(711, 428);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listBox3);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.groupBox2);
@@ -231,6 +245,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,6 +265,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

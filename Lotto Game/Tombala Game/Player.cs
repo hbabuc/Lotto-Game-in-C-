@@ -25,21 +25,21 @@ namespace Tombala_Game
             grp.Text = text;
             form.Controls.Add(grp);
 
-            int spacex = 28,spacey = 37, c = 1;
+            int spacex = 25,spacey = 37, c = 1;
 
             for (int i = 1; i < 16; i++)
 			{
 			    Label label = new Label();
                 label.Text = "90";
                 label.Name = grp.Name + "_" + i.ToString();
-                label.Size = new Size(30, 25);
+                label.Size = new Size(35, 25);
                 label.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                 label.ForeColor = Color.FromName("HotTrack");
                 label.BorderStyle = BorderStyle.FixedSingle;
                 label.TextAlign = ContentAlignment.MiddleCenter;
                 label.Location = new Point(spacex, spacey);
                 spacex += 39;
-                if (c++ % 5 == 0) { spacex = 28; spacey += 38; }
+                if (c++ % 5 == 0) { spacex = 25; spacey += 38; }
                 grp.Controls.Add(label);
                
 			}
